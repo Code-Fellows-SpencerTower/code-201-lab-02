@@ -39,7 +39,7 @@ function guessingGame() {
         alert("Invalid response. Please answer 'yes'/'y' or 'no'/'n'.")
     }
 
-    let meditateResponse = prompt("Does Spencer like to meditate?");
+    let meditateResponse = prompt("Does Spencer like to meditate?").toLowerCase();
     if ((meditateResponse === 'yes') || (meditateResponse === 'y')) {
         alert("Correct! I try to meditate everyday.");
         userScore += 1;
@@ -49,7 +49,7 @@ function guessingGame() {
         alert("Invalid response. Please answer 'yes'/'y' or 'no'/'n'.")
     }
 
-    let favBookResponse = prompt("Is Dune Spencer's favorite book?");
+    let favBookResponse = prompt("Is Dune Spencer's favorite book?").toLowerCase();
     if ((favBookResponse === 'yes') || favBookResponse === 'y') {
         alert("That's correct!");
         userScore += 1;
@@ -59,7 +59,7 @@ function guessingGame() {
         alert("Invalid response. Please answer 'yes'/'y' or 'no'/'n'.")
     }
 
-    let hikingResponse = prompt("Does Spencer like to go hiking?");
+    let hikingResponse = prompt("Does Spencer like to go hiking?").toLowerCase();
     if ((hikingResponse === 'yes') || (hikingResponse === 'y')) {
         alert("That's right! Especially Mailbox Peak.");
         userScore += 1;
