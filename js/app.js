@@ -1,7 +1,7 @@
 "use strict";
 
 // about me guessing game
-
+/*
 let userName = prompt("Hello, what is your name?");
 alert("Hello, " + userName + ". Welcome to the site!");
 
@@ -88,5 +88,23 @@ function guessingGame() {
         alert("Invalid response. Please answer 'yes'/'y' or 'no'/'n'.")
     }
 
+            
+
+
     alert("Well done " + userName + " you got " + userScore + "/5 questions right!");
 } 
+*/
+// guess a number
+for (let i=0; i <=4; i++) {
+    let numberGuess = prompt("Guess a number between 1 and 100:");
+    if (numberGuess < 74) {
+        alert("Too low! Guess again.");
+    } else if (numberGuess > 74) {
+        alert("Too high! Guess again.");
+    } else if (numberGuess == 74) {
+        alert("You guessed it!");
+        break;
+    } else {
+        alert("Please enter a number between 1 and 100:");
+    }
+    }
