@@ -1,5 +1,5 @@
 "use strict";
-/*
+// /*
 // about me guessing game
 
 let userName = prompt("Hi, I'm Spencer. What is your name?");
@@ -21,8 +21,39 @@ if ((userResponse === 'yes') || (userResponse === 'y')) {
 
 function guessingGame() {
     
-    let userScore = 0;
     
+    let userScore = 0;
+    // Outer most layer for our question array
+    let questionsArray = [
+        //question 
+        ["Am I from Seattle?", "Is my favorite sport basketball?", "Do I like to meditate?", "Is Dune my favorite book?", "Do I like to go hiking?"],
+        //rightAnwer
+        ["yes", "no", "yes", "yes", "yes"],
+        //wrongAnswer
+        ["no", "yes", "no", "no", "no"],  
+        //responseCorrect
+        // ["correct", "correct", "correct", "correct", "correct"],
+        // // responseIncorrect
+        // []    
+    ];
+
+
+    for(let x = 0; x < questionsArray[0].length; x += 1) {
+        // Inside this loop, we will prompt the user a question based off index 0 of questionsArray.
+        let userAnswer = prompt(questionsArray[0][x]); // index 1
+        let answerNormalized = userAnswer.toLowerCase();
+
+        if(answerNormalized === questionsArray[1][x]) {
+            alert('congrat');
+            userScore += 1;
+        } else if (answerNormalized === questionsArray[2][x]) {
+            alert('you suck');
+        } else {
+            alert("That is not a valid answer, please enter 'yes' or 'no'");
+            x -= 1;
+        }
+    }
+/*
     // question 1
     let cityResponse = prompt("Am I from Seattle?").toLowerCase();
     if ((cityResponse === 'yes') || (cityResponse === 'y')) {
@@ -114,7 +145,7 @@ function guessingGame() {
             alert("Please enter a number between 1 and 100:");
         }
     }
-    */
+
     // question 7
     let placesVisited = ['england', 'thailand', 'ecuador', 'japan', 'canada', 'spain'];
     let answer = false;
@@ -144,7 +175,8 @@ function guessingGame() {
         // }
         
     }
-
+*/
     // tell user score
     alert("Well done, you got " + userScore + "/7 questions correct!");
-//}
+    
+}
