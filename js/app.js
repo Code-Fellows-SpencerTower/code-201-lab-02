@@ -95,14 +95,17 @@ function guessingGame() {
 */
     // question 6
     let correctNum = 74;
-    let guesses = 4;
-    for (let i=0; i <= guesses; i++) {
+    let guessLimit = 4;
+    for (let i=0; i < guessLimit; i++) {
         let numberGuess = parseInt(prompt("Guess a number between 1 and 100:"));
-        if (numberGuess < correctNum) {
+        console.log("numberGuess: " + numberGuess);
+
+        if ((numberGuess < 1) || (numberGuess > 100)) {
+            alert("Please enter a number between 1 and 100:");
+        } else if (numberGuess < correctNum) {
             alert("Too low! Guess again.");
         } else if (numberGuess > correctNum) {
             alert("Too high! Guess again.");
-        // loose equivalent to accept string
         } else if (numberGuess === correctNum) {
             alert("You guessed it!");
             userScore += 1;
