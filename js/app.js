@@ -94,14 +94,15 @@ function guessingGame() {
     }
 
     // question 6
+    let correctNum = 74;
     for (let i=0; i <=4; i++) {
-        let numberGuess = prompt("Guess a number between 1 and 100:");
-        if (numberGuess < 74) {
+        let numberGuess = parseInt(prompt("Guess a number between 1 and 100:"));
+        if (numberGuess < correctNum) {
             alert("Too low! Guess again.");
-        } else if (numberGuess > 74) {
+        } else if (numberGuess > correctNum) {
             alert("Too high! Guess again.");
         // loose equivalent to accept string
-        } else if (numberGuess == 74) {
+        } else if (numberGuess === correctNum) {
             alert("You guessed it!");
             userScore += 1;
             break;
