@@ -92,7 +92,7 @@ function guessingGame() {
         //console.log("hikingResponse: " + "Invalid response.");
         alert("Invalid response. Please answer 'yes'/'y' or 'no'/'n'.")
     }
-*/
+
     // question 6
     let correctNum = 74;
     let guessLimit = 4;
@@ -114,16 +114,16 @@ function guessingGame() {
             alert("Please enter a number between 1 and 100:");
         }
     }
-    
+    */
     // question 7
     let placesVisited = ['england', 'thailand', 'ecuador', 'japan', 'canada', 'spain'];
     let answer = false;
     for (let i = 0; i < 6; i++) {
         let placesResponse = prompt("What countries have I visited?").toLowerCase();
         // console.log("Number of guesses left: " + i)
-        for (let i = 0; i <= placesVisited.length; i++) {
-            // console.log("placesVisited: " + placesVisited[i]);
-            if (placesResponse === placesVisited[i]) {
+        for (let j = 0; j <= placesVisited.length; j++) {
+            // console.log("placesVisited: " + placesVisited[j]);
+            if (placesResponse === placesVisited[j]) {
                 alert("Correct!");
                 answer = true;
                 userScore += 1;
