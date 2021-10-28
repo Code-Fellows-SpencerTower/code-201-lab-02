@@ -1,5 +1,5 @@
 "use strict";
-
+/*
 // about me guessing game
 
 let userName = prompt("Hi, I'm Spencer. What is your name?");
@@ -92,10 +92,11 @@ function guessingGame() {
         //console.log("hikingResponse: " + "Invalid response.");
         alert("Invalid response. Please answer 'yes'/'y' or 'no'/'n'.")
     }
-
+*/
     // question 6
     let correctNum = 74;
-    for (let i=0; i <=4; i++) {
+    let guesses = 4;
+    for (let i=0; i <= guesses; i++) {
         let numberGuess = parseInt(prompt("Guess a number between 1 and 100:"));
         if (numberGuess < correctNum) {
             alert("Too low! Guess again.");
@@ -143,4 +144,4 @@ function guessingGame() {
 
     // tell user score
     alert("Well done, you got " + userScore + "/7 questions correct!");
-}
+//}
