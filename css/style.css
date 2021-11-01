@@ -1,22 +1,59 @@
 body {
-    background-color: antiquewhite;
+    background-color: beige;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 h1 {
-    color: black;
+    color: rgb(43, 95, 226);
     padding: 1em;
+    border: #ff7f50 solid 2px;
+    border-width: 4px;
+    text-align: center;
+
+}
+
+h2 {
+    color:rgb(43, 95, 226);
+    font-style: oblique;
+    text-align: center;
+
+}
+
+ol {
+    margin-left: auto;
+    margin-right: auto;
+    border-width: 4px;
+}
+
+ol li:nth-of-type(odd) {
+    color: purple;
 }
 
 #bio {
     color: brown;
+    max-width: 70%;
     padding: 2em;
     border: 1px solid;
     margin: 1em;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #topten {
-    color: rgb(54, 42, 165);
+    color: rgb(48, 42, 165);
+    max-width: 50%;
     padding: 2em;
     border: 1px solid;
     margin: 1em;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+#startbutton {
+    color:rgb(42, 67, 165);
+    border-style: groove;
+    position: relative;
+    top: 50%;
+    left: 50%;    
 }

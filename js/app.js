@@ -7,17 +7,6 @@ alert("Hello, " + userName + ". Welcome to the site!");
 
 alert("Click the 'Start' button to initiate a guessing game.")
 
-//let userResponse = prompt("Would you like to play a guessing game to find out more about me?").toLowerCase();
-
-// if respond yes, run guessing game
-if ((userResponse === 'yes') || (userResponse === 'y')) {
-    alert("Great, let's begin!");
-} else if ((userResponse === 'no') || (userResponse === 'n')) {
-    alert("Goodbye!");
-} else {
-    alert("Invalid input. Goodbye!");
-}
-
 // questions 1-5
 function aboutMeGuess() {
     let userScore = 0;
@@ -31,6 +20,8 @@ function aboutMeGuess() {
         ["no", "yes", "no", "no", "no"]
     ];
 
+    alert("Let's start with a guessing game about me: ");
+
     for (let x = 0; x < questionsArray[0].length; x += 1) {
         // Inside this loop, we will prompt the user a question based off index 0 of questionsArray.
         let userAnswer = prompt(questionsArray[0][x]); // index 1
@@ -43,16 +34,17 @@ function aboutMeGuess() {
             alert('Incorrect!');
         } else {
             alert("That is not a valid answer, please enter 'yes' or 'no'");
-            x -= 1;
         }
     }
 }
 
 // question 6
 function numberGuess() {
-    let correctNum = 74;
+    // credit: w3schools
+    let correctNum = Math.floor(Math.random() * 100);
+    console.log("correctNum:" + correctNum);
     let guessLimit = 4;
-    for (let i = 0; i < guessLimit; i++) {
+    for (let i = 0; i <= guessLimit; i++) {
         let numberGuess = parseInt(prompt("Guess a number between 1 and 100:"));
         console.log("numberGuess: " + numberGuess);
 
@@ -98,7 +90,7 @@ function placesVisitedGuess() {
     }
 }
 
-function initiateGuessingGame() {
+function startGuessingGame() {
     aboutMeGuess();
     numberGuess();
     placesVisitedGuess();
