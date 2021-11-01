@@ -70,14 +70,11 @@ function placesVisitedGuess() {
     let answer = false;
     for (let i = 0; i < 6; i++) {
         let placesResponse = prompt("What countries have I visited?").toLowerCase();
-        // console.log("Number of guesses left: " + i)
         for (let j = 0; j <= placesVisited.length; j++) {
-            // console.log("placesVisited: " + placesVisited[j]);
             if (placesResponse === placesVisited[j]) {
                 alert("Correct!");
                 answer = true;
                 userScore += 1;
-                // console.log("userScore: " + userScore);
                 break;
             }
         }
