@@ -1,12 +1,12 @@
 body {
-    background-color: beige;
+    background-color: white;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 h1 {
     color: rgb(43, 95, 226);
     padding: 1em;
-    border: #ff7f50 solid 2px;
+    border: rgb(228, 129, 8) solid 2px;
     border-width: 4px;
     text-align: center;
 
